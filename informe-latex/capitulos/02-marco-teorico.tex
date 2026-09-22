@@ -1,14 +1,36 @@
 % Capítulo 2: Marco Teórico
-% Propósito: Presentar las bases teóricas, conceptos clave, antecedentes de investigación y el estado del arte que fundamentan el proyecto.
+% Propósito: Presentar los antecedentes del proyecto, las bases teóricas y los términos clave que fundamentan el desarrollo de NicaWorkLink.
 
 \section{Marco Teórico}
 
-En la Figura \ref{fig:ejemplo-diagrama} se ilustra el esquema general del proceso de desarrollo.
+\subsection{Antecedentes del Proyecto}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\textwidth]{logo-unhsjm.jpeg}
-  \caption{Isologo Institucional y Diagrama de Referencia.}
-  \label{fig:ejemplo-diagrama}
-\end{figure}
+NicaWorkLink surge de observar que varias universidades, tanto en Perú y Ecuador como dentro de Nicaragua, ya han identificado y atendido parcial o totalmente el mismo problema de fondo: la falta de un canal digital y centralizado entre estudiantes, universidad y empresas para gestionar prácticas y pasantías. Trabajos como los de \textcite{gomezatoche2025} y \textcite{tene2021} muestran que digitalizar este proceso reduce los tiempos de trámite y ordena la comunicación entre las partes involucradas, mientras que \textcite{torresremon2022} demuestra, con datos de antes y después, que la simple ausencia de un sistema ---y no la falta de personal--- es la causa principal de la lentitud del proceso.
 
+En el ámbito nacional, los antecedentes revisados son especialmente relevantes porque confirman que este problema no es ajeno a la realidad nicaragüense: \textcite{aleman2020} documentó una ``débil potencialización de las prácticas de formación profesional'' dentro de la UNAN-Managua, e \textcite{iglesiasgaray2017} identificaron la misma falta de un canal digital directo entre estudiantes y empresas en esa misma universidad. NicaWorkLink retoma estas ideas, pero las aplica a un contexto que ningún antecedente revisado ha cubierto todavía: el municipio de Rivas y la UNHSJM, integrando en una sola plataforma la publicación de ofertas, la gestión de postulaciones y el control de horas cumplidas.
+
+\subsection{Definición de términos}
+
+\subsubsection{Prácticas profesionales y pasantías}
+
+Las prácticas profesionales representan, para el estudiante, el primer acercamiento real al mundo laboral dentro de su área de estudio. Según \textcite{torresbugdud2007}, orientar la formación universitaria hacia un carácter integral implica ir más allá de una visión estrecha y enciclopedista de la universidad, involucrando activamente al estudiante en su propio proceso de desarrollo personal y profesional, y no limitándose únicamente a los conocimientos teóricos de su carrera. En la misma línea, \textcite{gardey2015} explica que las prácticas profesionales suelen ser el primer paso de un estudiante o recién graduado dentro del mercado laboral, combinando elementos propios de un empleo (cumplir horarios, seguir instrucciones de un superior) con elementos de aprendizaje y formación.
+
+Es importante diferenciar ``práctica profesional'' de ``pasantía'', ya que en el lenguaje cotidiano suelen usarse como sinónimos, pero no siempre lo son. La práctica profesional generalmente es de carácter obligatorio y forma parte del plan de estudios que el estudiante debe cumplir para graduarse, mientras que la pasantía suele ser voluntaria y no necesariamente está atada a un requisito curricular, aunque ambas persiguen el mismo fin: que la persona ponga en práctica los conocimientos adquiridos durante su formación y gane experiencia laboral real antes de graduarse \parencite{westreicher2020}. La \textcite{urosario2015} define la práctica como un espacio que permite al estudiante vincularse con su entorno laboral, afinar sus destrezas y decidir sobre sus preferencias profesionales, siendo parte integral y obligatoria del currículo académico.
+
+\subsubsection{Vinculación Universidad-Empresa-Sociedad}
+
+La vinculación universitaria es el mecanismo mediante el cual una institución de educación superior conecta su labor académica con las necesidades del entorno productivo y social. De acuerdo con \textcite{bei1997}, la vinculación puede entenderse como el conjunto de procesos y prácticas planificadas, sistematizadas y evaluadas continuamente, donde los elementos académicos y administrativos de una universidad se relacionan tanto internamente como con otras personas y organizaciones externas, con el propósito de generar beneficios mutuos: brindar servicios profesionales a las empresas, conectar la educación superior con el mundo del trabajo, y fortalecer la formación de los estudiantes.
+
+La \textcite{uchile2017} complementa esta idea al señalar que la vinculación con el medio busca crear y mantener procesos permanentes de interacción, integración y comunicación entre la universidad y la comunidad, tanto interna como externa, con el fin de aportar al desarrollo social y cultural del país. Cuando esta vinculación es débil o poco organizada, como documentó \textcite{aleman2020} en el caso de la UNAN-Managua, se generan problemas como la falta de comunicación entre los departamentos académicos y las empresas, el desconocimiento de los convenios existentes, y la ausencia de un mecanismo que dé seguimiento ordenado a las actividades de vinculación. Este es precisamente el tipo de problema que NicaWorkLink busca resolver a nivel tecnológico dentro de la UNHSJM.
+
+\subsubsection{Postulación}
+
+Dentro de la plataforma, la postulación es la acción mediante la cual un estudiante manifiesta formalmente su interés en una oferta de práctica o pasantía publicada por una empresa, dando inicio al proceso mediante el cual dicha empresa revisa el perfil del estudiante y decide si continuar o no con su incorporación. Este proceso guarda relación con lo que en la gestión de talento humano se conoce como proceso de selección: el conjunto de etapas mediante las cuales una organización evalúa a los candidatos disponibles para elegir al más adecuado para una vacante o, en este caso, para un espacio de práctica \parencite{carazo2020}.
+
+En el contexto de NicaWorkLink, la postulación no reemplaza la decisión final de la empresa, sino que ordena y centraliza el primer contacto entre el estudiante interesado y la oferta publicada, de manera que la empresa pueda revisar en un mismo lugar a todos los estudiantes que aplicaron a una vacante determinada, en lugar de recibir esa información de forma dispersa por distintos medios, como ocurre actualmente.
+
+\subsubsection{Acumulado de horas}
+
+El acumulado de horas es el registro del total de horas que un estudiante ha cumplido durante su práctica, llevado dentro de la plataforma para que tanto el estudiante como la universidad puedan dar seguimiento al avance hacia el cumplimiento del requisito de horas establecido por la carrera. Este control es importante porque, como lo muestra \textcite{torresremon2022}, cuando el registro y la supervisión de las horas de práctica dependen únicamente de métodos manuales, el coordinador tarda considerablemente más tiempo en verificar el cumplimiento de cada estudiante, situación que un sistema como NicaWorkLink busca prevenir al automatizar y centralizar dicho registro.
+
+De esta manera, el acumulado de horas dentro de NicaWorkLink no solo sirve como un dato administrativo, sino como una herramienta de seguimiento que permite a la universidad identificar de forma oportuna si un estudiante se está atrasando respecto al tiempo que le queda para completar su práctica, algo que actualmente es difícil de detectar a tiempo con los registros manuales.

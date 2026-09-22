@@ -1,7 +1,107 @@
 % Capítulo 1: Introducción
-% Propósito: Describir los antecedentes, planteamiento del problema, justificación, formulación y los objetivos (general y específicos) del proyecto de grado.
+% Propósito: Describir el planteamiento del problema (con su formulación), los objetivos (general y específicos), los antecedentes de estudio, los alcances y las limitaciones del proyecto de grado.
 
 \section{Introducción}
 
-El desarrollo de sistemas de software requiere la aplicación rigurosa de principios de ingeniería de software \parencite{sommerville2011}. Como señala \textcite{pressman2010}, la calidad del software está directamente vinculada al proceso empleado durante su construcción.
+A lo largo de nuestra formación en la carrera de Ingeniería en Sistemas de Información, hemos comprendido el impacto que tiene la tecnología cuando se aplica para resolver problemas reales de nuestro entorno. Una etapa fundamental en este proceso son las pasantías y prácticas profesionales, ya que representan el puente entre la preparación académica y el ejercicio profesional.
 
+Este puente, sin embargo, no siempre está bien construido. Estudios recientes muestran que el problema no es exclusivo de una carrera o una universidad en particular: \textcite{aleman2020}, en su investigación sobre la vinculación entre la UNAN-Managua y el sector empresarial, encontró que, a pesar de que la universidad cuenta con políticas y planes bien definidos en el papel, en la práctica existe una débil comunicación entre los departamentos académicos y las empresas, y no hay un mecanismo organizado que le dé seguimiento a las prácticas profesionales. De forma similar, \textcite{iglesiasgaray2017} identificaron que los estudiantes de los últimos años y los egresados de esa misma universidad enfrentan serios obstáculos para conseguir su primera experiencia laboral, ya que no cuentan con un canal digital directo hacia las empresas que buscan su perfil. Incluso a nivel de educación técnica, \textcite{luquez2022} documentó en el Instituto Latinoamericano de Computación que la falta de un protocolo formal de pasantías genera desconocimiento del proceso entre los propios estudiantes y ausencia de comunicación ordenada con las empresas.
+
+En la Universidad Nacional Héroes de San José de las Mulas (UNHSJM), en el municipio de Rivas, este proceso involucra de manera directa a tres partes: estudiantes, empresas y la propia universidad. Actualmente, la gestión de estas prácticas se apoya en distintos canales, tales como contactos personales, redes sociales, publicaciones independientes por parte de las empresas y registros manuales para el seguimiento de las horas cumplidas. Aunque esta dinámica ha funcionado, identificamos que existe un margen importante para mejorar la organización, la visibilidad de las oportunidades para los estudiantes y el control por parte de la universidad; un patrón que, como muestran los antecedentes anteriores, se repite en otras universidades nicaragüenses cuando no existe una plataforma centralizada que ordene este proceso.
+
+De esta necesidad nace NicaWorkLink, una plataforma web concebida para digitalizar y centralizar el proceso de pasantías y prácticas en un mismo espacio. La herramienta busca simplificar desde la publicación y consulta de ofertas, hasta la gestión de postulaciones y el control eficiente del acumulado de horas, generando un valor práctico tanto para los estudiantes como para el tejido empresarial de Rivas y las autoridades académicas.
+
+\section{Planteamiento del problema}
+
+En la Universidad Nacional Héroes de San José de las Mulas (UNHSJM), ubicada en el municipio de Rivas, las pasantías y prácticas profesionales de los estudiantes se manejan actualmente de forma manual. Esto quiere decir que, aunque el proceso sigue sus pasos formales, todo se hace a mano: los estudiantes se enteran de las oportunidades de pasantía principalmente por contactos personales o por publicaciones que cada empresa hace por su cuenta en redes sociales, y el control de las horas cumplidas se lleva en registros físicos o en documentos sueltos, sin un lugar único donde se guarde toda esta información.
+
+Al no existir un solo lugar donde se junte toda la información de pasantías y prácticas profesionales, cada estudiante tiene que buscar por su cuenta dónde hacerlas, sin poder ver de forma clara y ordenada qué empresas de Rivas están ofreciendo oportunidades en ese momento. De la misma manera, las empresas no cuentan con un espacio donde puedan publicar sus ofertas de forma que llegue directamente a los estudiantes que buscan pasantía y prácticas, por lo que terminan usando medios que no fueron pensados para eso, como publicaciones personales en redes sociales.
+
+Si esta forma manual de trabajar se mantiene, es probable que los estudiantes sigan dependiendo de la suerte o de sus contactos personales para conseguir una pasantía o práctica, lo cual no es igual de fácil para todos. También puede seguir dándose que se pierda o se confunda información importante sobre el cumplimiento de horas, y que las empresas de Rivas no logren encontrar fácilmente a los estudiantes que necesitan.
+
+\subsection{Formulación del problema}
+
+\subsubsection{Problema general}
+
+¿Cómo afecta la falta de un espacio único y automatizado para gestionar las pasantías a la forma en que los estudiantes de la UNHSJM y las empresas de Rivas se conectan entre sí?
+
+\subsubsection{Preguntas específicas}
+
+\begin{itemize}
+	\item ¿Qué información necesitan realmente los estudiantes, las empresas y la universidad para manejar mejor el proceso de pasantías?
+	\item ¿Cómo afecta a los estudiantes de Rivas el no tener un solo lugar donde ver todas las oportunidades de pasantía disponibles?
+	\item ¿De qué manera la forma actual de llevar el control de horas dificulta el seguimiento de las pasantías por parte de la universidad?
+\end{itemize}
+
+\newpage
+
+\section{Objetivos}
+
+\subsection{Objetivo general}
+Desarrollar una plataforma web para gestionar las pasantías y prácticas profesionales de la Universidad Nacional Héroes de San José de las Mulas (UNHSJM), que permita centralizar la información, facilitar la conexión entre estudiantes y empresas de Rivas, y mejorar el seguimiento de las horas cumplidas por los estudiantes.
+
+\subsection{Objetivos específicos}
+\begin{itemize}
+	\item Identificar la información que necesitan los estudiantes, las empresas y la universidad para organizar y gestionar de mejor manera el proceso de pasantías y prácticas profesionales.
+	\item Diseñar una plataforma web que centralice las oportunidades de pasantías disponibles en empresas de Rivas, permitiendo a los estudiantes consultar las ofertas y realizar sus postulaciones.
+	\item Implementar un sistema de registro y seguimiento de las horas cumplidas por los estudiantes, que facilite a la universidad la supervisión y el control del avance de las pasantías.
+\end{itemize}
+
+\newpage
+
+\section{Antecedentes de estudio}
+
+Para la realización de este trabajo se hizo una recolección y revisión de distintas investigaciones relacionadas con la gestión de prácticas preprofesionales y la vinculación entre universidad y empresas, obteniendo así datos relevantes que sirven de base y guía para esta investigación. No existen muchos estudios que aborden este tema aplicado específicamente al municipio de Rivas o a la UNHSJM; sin embargo, se encontraron los siguientes antecedentes tanto a nivel internacional como dentro de Nicaragua.
+
+\subsection{A nivel nacional}
+
+\textcite{aleman2020}, en su tesis de maestría ``Vinculación Universidad-Empresa-Estado-Sociedad mediante prácticas de formación profesional y su incidencia en la formación de profesionales competentes en la UNAN-Managua, 2015-2018'', evaluó cómo la UNAN-Managua gestionaba sus alianzas con empresas y el Estado a través de las prácticas profesionales. Mediante entrevistas a docentes, empresarios y encuestas a 196 estudiantes de cuarto año de cuatro facultades, encontró que, a pesar de que la universidad tenía políticas y planes bien definidos en el papel, en la práctica existía una ``débil potencialización de las prácticas de formación profesional'': había poca comunicación entre los departamentos académicos, los convenios con empresas no se conocían ni se aprovechaban bien, y no había un sistema que diera seguimiento organizado a las actividades de vinculación. Este antecedente es sumamente relevante para NicaWorkLink porque, aunque no propone un sistema web, documenta con datos de una universidad nicaragüense real que la falta de coordinación y de un mecanismo centralizado entre universidad y empresas es un problema medido y confirmado dentro del propio país, no solo una suposición.
+
+\textcite{iglesiasgaray2017}, en su proyecto de graduación ``Bolsa de empleo virtual para estudiantes de cuarto y quinto año y egresados de la UNAN, Managua'', identificaron que los estudiantes de los últimos años y los egresados de la UNAN-Managua enfrentaban serios obstáculos para conseguir su primer empleo o práctica, ya que la mayoría de instituciones exige experiencia previa que estos estudiantes aún no tienen. Su solución fue diseñar una bolsa de empleo virtual, integrada al portal de la universidad, donde las empresas pudieran consultar directamente el talento humano disponible por carrera. Para justificar la propuesta, entrevistaron al personal de la Oficina de División de Vida Estudiantil y a la Unión Nacional de Estudiantes, y encuestaron a una muestra de 13 estudiantes de distintas carreras. Este antecedente es relevante para NicaWorkLink porque documenta, dentro de Nicaragua, el mismo problema de fondo: la falta de un canal digital directo entre los estudiantes y las empresas que necesitan su talento, y valida la idea de una plataforma centralizada como solución.
+
+\textcite{luquez2022}, en su trabajo monográfico ``Impacto de la implementación de un programa de pasantías para los bachilleres técnicos del Instituto Latinoamericano de Computación durante el II semestre del 2022'' (Managua, Nicaragua), estudió el caso de ILCOMP, un instituto que ya tenía prácticas preprofesionales para sus estudiantes universitarios, pero no contaba con ningún programa formal de pasantías para los bachilleres técnicos de secundaria. A través de entrevistas encontró que la falta de un protocolo claro generaba desconocimiento del proceso y que no había un canal formal de comunicación entre el instituto y las empresas. Este antecedente confirma que el vacío de procesos formales de prácticas también existe dentro de Nicaragua.
+
+\subsection{A nivel internacional}
+
+\textcite{paucar2022}, en su tesis sobre el sistema ``PRACPRE'' en la Universidad Nacional Daniel Alcides Carrión (Perú), creó un sistema para que los estudiantes registraran y dieran seguimiento a sus prácticas, en lugar de hacerlo con formularios físicos. Encuestó a 27 estudiantes antes y después de usar el sistema, y encontró que la mayoría sintió que el trámite se volvió más rápido y que quedaron más satisfechos con el proceso.
+
+\textcite{gomezatoche2025}, en su trabajo sobre el sistema ``ValidaPre'' en la Universidad de Piura (Perú), primero se dedicaron a entender cómo funcionaba el proceso de prácticas en seis facultades distintas, antes de diseñar la solución. Descubrieron que el paso donde más se atascan los trámites es cuando el profesor tiene que revisar y aprobar los documentos del estudiante, lo cual puede tardar más de un mes en total.
+
+\textcite{delgadoosorio2024}, en su tesis sobre un sistema de gestión de prácticas en la Universidad Iberoamericana del Ecuador, construyeron su plataforma a partir de una encuesta a 464 personas de la comunidad universitaria, para saber qué información y qué funciones necesitaba el sistema. Ellos mismos mencionan otras investigaciones parecidas hechas en distintas universidades de Ecuador, lo que confirma que perder documentos, tener retrasos y no saber en qué va el trámite es un problema que se repite en varias universidades de la región.
+
+\textcite{cordovacondor2024}, en su trabajo sobre un sistema para gestionar proyectos de vinculación con la comunidad en la Universidad Politécnica Salesiana (Ecuador), aunque no trata directamente sobre prácticas preprofesionales sino sobre otro tipo de proyectos universitarios, sirve como ejemplo de cómo digitalizar procesos administrativos que antes se manejaban de forma dispersa. Esto refuerza la idea de que centralizar la información en un solo sistema resuelve varios problemas parecidos, sin importar el tipo de trámite universitario.
+
+\textcite{torresremon2022}, en su tesis sobre un sistema web para gestionar las prácticas del IESTP ``Manuel Arévalo Cáceres'' en Lima (Perú), comparó cómo trabajaba el coordinador académico antes y después de usar el sistema. Antes, todo se llevaba en Excel, lo cual no es un sistema real sino solo una hoja de cálculo que ayuda a ordenar un poco, pero no automatiza nada. Después de implementar el sistema, el coordinador registró más solicitudes, llevó mejor el control de las supervisiones de los estudiantes, y tardó mucho menos tiempo en buscar la información de cada trámite. Este antecedente es útil porque muestra, con datos reales de antes y después, que la simple falta de un sistema (y no solo la falta de personal o de recursos) es lo que causa la lentitud del proceso, algo que también se sospecha que ocurre en la UNHSJM.
+
+\textcite{tene2021}, en su tesis sobre un sistema web para las prácticas y pasantías de la ESFOT en la Escuela Politécnica Nacional (Ecuador), construyó una plataforma donde cada tipo de usuario ---estudiante, profesor tutor, jefe de la empresa, personal administrativo y una comisión que aprueba las prácticas--- entra con su propia cuenta y solo ve la información que le corresponde. El estudiante pide su práctica desde la plataforma, el profesor le da seguimiento y aprueba su avance, la empresa confirma que cumplió sus actividades, y al final una comisión revisa y aprueba todo el proceso. Antes de este sistema, todo se hacía con formularios en papel, lo que generaba pérdida de documentos y demoras en la comunicación entre las partes. Este antecedente es muy relevante para NicaWorkLink porque muestra un ejemplo concreto de cómo repartir el trabajo entre distintos tipos de usuario (algo parecido a lo que se necesita entre estudiantes, universidad y empresas en Rivas), y porque fue construido con herramientas gratuitas y de código abierto, mostrando que no se necesita un gran presupuesto para lograrlo.
+
+\section{Alcances}
+
+NicaWorkLink se desarrollará como una plataforma web dirigida a tres tipos de usuario: estudiantes, empresas y un administrador que representa a la universidad. En esta primera etapa se contempla:
+
+\begin{itemize}
+	\item Registro y gestión de perfiles diferenciados para estudiantes (datos personales, universidad, carrera, horas requeridas, biografía, currículum) y para empresas (nombre comercial, RUC, sector, dirección, descripción, logo).
+	\item Una única cuenta de administrador, correspondiente a la Universidad Nacional Héroes de San José de las Mulas, con acceso para supervisar la actividad del sistema.
+	\item Publicación de ofertas de pasantías por parte de las empresas, especificando área, título, descripción, cantidad de plazas, requisitos, modalidad (presencial, virtual o ambas) y horas diarias.
+	\item Consulta y postulación de los estudiantes a las ofertas publicadas, con seguimiento del estado de cada postulación (pendiente, aceptada o rechazada).
+	\item Publicación, por parte del estudiante, de un anuncio de búsqueda de pasantía, indicando su área de interés, disponibilidad y habilidades, para que las empresas también puedan encontrarlo a él.
+	\item Registro y reporte del acumulado de horas cumplidas por el estudiante una vez aceptado en una pasantía, incluyendo la fecha y observaciones de cada reporte.
+	\item Supervisión, por parte del administrador, del avance y cumplimiento de horas de los estudiantes registrados en el sistema.
+	\item Paneles de control con indicadores y gráficas para los tres tipos de usuario, que resuman su actividad dentro de la plataforma (ofertas, postulaciones, horas).
+	\item Gestión de cuentas de usuario, incluyendo registro, inicio de sesión y administración del perfil.
+\end{itemize}
+
+\section{Limitaciones}
+
+Como NicaWorkLink se desarrollará dentro del tiempo previsto para este proyecto académico y se concentrará en sus funciones principales, será necesario establecer algunos límites para mantener el trabajo enfocado y realizable:
+
+\begin{itemize}
+	\item La solución se desarrollará como aplicación web; en esta etapa no se contempla una aplicación móvil nativa.
+	\item El sistema se diseñará para funcionar con una sola institución (la UNHSJM), representada por una única cuenta de administrador; no se contempla en esta etapa una estructura que permita registrar y administrar varias universidades dentro de la misma plataforma.
+	\item El sistema no gestiona pagos ni remuneraciones, ya que las pasantías contempladas no son necesariamente remuneradas.
+	\item No sustituye los convenios ni documentos legales que la universidad y las empresas deban firmar de forma oficial, solo organiza el proceso operativo de publicación, postulación y seguimiento de horas.
+	\item No incluye un módulo de mensajería o chat interno entre estudiante y empresa, la comunicación posterior a la postulación se maneja fuera de la plataforma.
+	\item No incluye un proceso de verificación o validación de la identidad legal de las empresas (por ejemplo, comprobar que el RUC ingresado sea válido), se asume que los datos ingresados por la empresa son correctos.
+	\item No garantiza la colocación de un estudiante en una empresa, solo facilita el proceso de publicación de ofertas, búsqueda y postulación.
+	\item El sistema depende de que los usuarios cuenten con acceso a internet.
+\end{itemize}
