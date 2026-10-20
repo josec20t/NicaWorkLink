@@ -1,5 +1,5 @@
 % Capítulo 3: Metodología
-% Propósito: Detallar el enfoque metodológico (Design Science Research), la arquitectura metodológica de tres niveles, el plan de trabajo basado en la DSRM, el estudio de mapeo sistemático (SMS) y la matriz de trazabilidad e indicadores de evaluación.
+% Propósito: Detallar el enfoque metodológico (Design Science Research), la arquitectura metodológica de tres niveles, las fases de la DSRM con sus tablas y diagramas, el nivel táctico ágil (Scrum / XP), el estudio de mapeo sistemático (SMS) y la matriz de trazabilidad e indicadores de evaluación.
 
 \section{Metodología}
 
@@ -33,11 +33,7 @@ El Ciclo de Diseño es el ciclo central de esta investigación, donde se constru
 	\item La evaluación de la propuesta, mediante el análisis de viabilidad técnica, operativa, económica y legal.
 \end{itemize}
 
-\subsection{Plan de trabajo (DSRM)}
-
-Para llevar la DSR a la práctica, la investigación adopta un plan de trabajo basado en la Design Science Research Methodology (DSRM) de \textcite{peffers2007}, que ordena el proceso en fases y lo conecta con la construcción de la plataforma.
-
-\subsubsection{Arquitectura metodológica e integración de enfoques}
+\subsection{Arquitectura metodológica e integración de enfoques}
 
 La presente investigación aborda una arquitectura metodológica de tres niveles, que une la investigación científica, la revisión del estado del arte y la ingeniería de software dentro de un mismo proceso. Cada nivel cumple una función propia y todos se desarrollan dentro del ciclo de la DSRM.
 
@@ -47,7 +43,7 @@ La presente investigación aborda una arquitectura metodológica de tres niveles
 
 \textbf{Nivel táctico: desarrollo de software.} La construcción del software se ejecuta dentro de la fase de diseño y desarrollo, mediante un marco ágil híbrido. Scrum \parencite{schwaber2020} conduce la gestión incremental del trabajo por medio de sprints y de una lista de pendientes. Extreme Programming, o XP \parencite{beck2000}, sostiene la calidad técnica con pruebas continuas, refactorización y desarrollo guiado por pruebas.
 
-\subsubsection{Ciclo DSRM y tipo de artefacto}
+\subsection{Ciclo DSRM y tipo de artefacto}
 
 El marco científico seguirá las seis fases iterativas del ciclo de \textcite{peffers2007} y las pautas para la acumulación del conocimiento de diseño \parencite{vombrocke2020,desordi2021}. El aporte principal se clasificará como una instanciación: la plataforma web NicaWorkLink, que se construirá como un sistema funcional y se probará en un entorno que reproduzca su uso real. Esta instanciación se apoyará en tres artefactos intermedios, según la clasificación de \textcite{hevner2004}:
 
@@ -57,19 +53,95 @@ El marco científico seguirá las seis fases iterativas del ciclo de \textcite{p
 	\item \textbf{Método:} las reglas y procesos que se incorporarán en el código, como la publicación de ofertas, la postulación, la aceptación o rechazo de postulaciones y el registro de horas.
 \end{itemize}
 
-\subsubsection{Desarrollo de las fases del marco DSRM}
+\subsection{Fase 1. Identificación del problema y motivación}
 
-\textbf{Fase 1. Identificación del problema y motivación.} En esta fase se documentará el proceso actual de gestión de pasantías y prácticas profesionales en la UNHSJM, CUR-Rivas, desde que una empresa ofrece una plaza hasta que se registran las horas del estudiante. Se identificarán los puntos del proceso que se realizan de forma manual y las dificultades que esto genera para el personal universitario, las empresas del municipio y los estudiantes. La relevancia del problema se sustentará con los antecedentes nacionales e internacionales, con el marco normativo y con el contexto de Rivas \parencite{peffers2007}.
+En esta fase se documentará el proceso actual de gestión de pasantías y prácticas profesionales en la UNHSJM, CUR-Rivas, desde que una empresa ofrece una plaza hasta que se registran las horas del estudiante. Se identificarán los puntos del proceso que se realizan de forma manual y las dificultades que esto genera para el personal universitario, las empresas del municipio y los estudiantes. La relevancia del problema se sustentará con los antecedentes nacionales e internacionales, con el marco normativo y con el contexto de Rivas \parencite{peffers2007}.
 
-\textbf{Fase 2. Definición de los objetivos de la solución.} A partir del problema identificado, se definirán los meta-requisitos de NicaWorkLink, agrupados según los tres tipos de usuario de la plataforma: estudiante, empresa y administrador. Estos meta-requisitos establecerán qué debe lograr la plataforma para centralizar y automatizar la gestión de pasantías, y qué la distingue de las soluciones encontradas en el mapeo sistemático. Cada uno quedará registrado en la matriz de trazabilidad, con su indicador de evaluación.
+\subsection{Fase 2. Definición de los objetivos de la solución (meta-requisitos)}
 
-\textbf{Fase 3. Diseño y desarrollo.} En esta fase se diseñará la plataforma y se construirá por etapas. Se propondrá una arquitectura por capas (Clean Architecture), con una interfaz web, un servicio central y una base de datos relacional, según se detalla en la viabilidad técnica. Se elaborarán los modelos que respaldan el diseño: el diagrama entidad-relación, los diagramas de clases y los diagramas de casos de uso. La construcción se organizará en sprints con Scrum y XP, y cada meta-requisito se traducirá en historias de usuario.
+A partir del problema identificado, se definirán los meta-requisitos de NicaWorkLink, agrupados según los tres tipos de usuario de la plataforma: estudiante, empresa y administrador. Estos meta-requisitos establecerán qué debe lograr la plataforma para centralizar y automatizar la gestión de pasantías, y qué la distingue de las soluciones encontradas en el mapeo sistemático. Cada uno quedará registrado en la matriz de trazabilidad, con su indicador de evaluación.
 
-\textbf{Fase 4. Demostración.} Se ejecutará una prueba de concepto en un entorno de pruebas con datos de ejemplo. Los casos de prueba cubrirán los flujos principales de la plataforma: publicar una oferta, postularse a ella, aceptar o rechazar una postulación, registrar las horas de un pasante y verificar que cada rol solo acceda a lo que le corresponde. Con esto se comprobará que la plataforma resuelve las situaciones planteadas en el problema.
+La Tabla~\ref{tab:meta-requisitos} presenta la relación inicial entre las necesidades identificadas, los meta-requisitos previstos y los modelos de diseño que los representan. Esta matriz no asigna porcentajes de mejora ni resultados cuantitativos, porque todavía no se han obtenido mediante la evaluación de la Fase 5.
 
-\textbf{Fase 5. Evaluación.} Se evaluará la plataforma midiendo los indicadores definidos en la matriz de trazabilidad, como el porcentaje de funciones completadas sin errores, la correcta actualización de las postulaciones, la coincidencia de las horas registradas, los accesos no autorizados bloqueados y los registros inconsistentes. Los resultados se compararán con los meta-requisitos de la Fase 2 para determinar cuáles se cumplen y cuáles requieren ajustes \parencite{sonnenberg2012}.
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Meta-requisitos de NicaWorkLink y su relación con los modelos de diseño}\label{tab:meta-requisitos}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{1.6cm}|X|X|>{\raggedright\arraybackslash}p{2.8cm}|}
+\hline
+\rowcolor{gray!15}
+\textbf{Código} & \textbf{Necesidad identificada} & \textbf{Meta-requisito previsto} & \textbf{Relación con el diseño} \\ \hline
+MR-01 & Centralizar la gestión de pasantías en un solo sistema para estudiantes, empresas y universidad. & Registrar y consultar usuarios, perfiles, ofertas y postulaciones desde una plataforma compartida. & Figuras~\ref{fig:diagrama_clases_nicaworklink} y~\ref{fig:diagrama_er_nicaworklink} \\ \hline
+MR-02 & Publicar ofertas y recibir postulaciones de los estudiantes. & Permitir que la empresa publique ofertas y que el estudiante se postule, con estados de la postulación (pendiente, aceptada, rechazada). & Figuras~\ref{fig:diagrama_clases_nicaworklink}, \ref{fig:diagrama_er_nicaworklink} y~\ref{fig:diagrama_casos_uso_nicaworklink} \\ \hline
+MR-03 & Controlar el avance de cada pasante mediante el registro de horas. & Asociar reportes de horas a cada postulación aceptada, con seguimiento de horas acumuladas. & Figuras~\ref{fig:diagrama_clases_nicaworklink} y~\ref{fig:diagrama_er_nicaworklink} \\ \hline
+MR-04 & Dar a cada tipo de usuario acceso solo a lo que le corresponde. & Autenticación con tokens (JWT) y permisos por rol: estudiante, empresa y administrador. & Figuras~\ref{fig:diagrama_clases_nicaworklink} y~\ref{fig:diagrama_casos_uso_nicaworklink} \\ \hline
+MR-05 & Proteger los datos personales y mantener la integridad de la información. & Modelo relacional normalizado en PostgreSQL, con restricciones de datos y manejo de errores, conforme a la Ley 787. & Figura~\ref{fig:diagrama_er_nicaworklink} \\ \hline
+MR-06 & Facilitar el uso a personas con poca experiencia en el sistema. & Interfaz con navegación guiada, validación de formularios en tiempo real y tableros con gráficos. & Figura~\ref{fig:diagrama_casos_uso_nicaworklink} \\ \hline
+\end{tabularx}
+\end{table}
 
-\textbf{Fase 6. Comunicación.} Los resultados de la investigación se presentarán en el informe de grado, siguiendo la estructura metodológica establecida para este tipo de proyectos \parencite{departamentociencias2023}, y se compartirán con la comunidad universitaria de la UNHSJM, CUR-Rivas.
+\subsection{Fase 3. Diseño y desarrollo del artefacto (meta-diseños)}
+
+En esta fase se diseñará la plataforma y se construirá por etapas. Se propondrá una arquitectura por capas (Clean Architecture), con una interfaz web, un servicio central y una base de datos relacional, según se detalla en la viabilidad técnica. Se elaborarán los modelos que respaldan el diseño: el diagrama entidad-relación, los diagramas de clases y los diagramas de casos de uso. La construcción se organizará en sprints con Scrum y XP, y cada meta-requisito se traducirá en historias de usuario.
+
+Los modelos elaborados se presentan a continuación. El diagrama de clases describe la estructura del dominio y los servicios de identidad; el diagrama entidad-relación muestra la persistencia prevista para esos datos; y el diagrama de casos de uso representa el comportamiento esperado del sistema desde la perspectiva de sus actores.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{diagrama-clases-nicaworklink.png}
+\caption{Diagrama de clases de NicaWorkLink}\label{fig:diagrama_clases_nicaworklink}
+\end{figure}
+
+El diagrama de clases presentado en la Figura~\ref{fig:diagrama_clases_nicaworklink} organiza los componentes principales del sistema NicaWorkLink alrededor de la gestión de identidad y autenticación de usuarios, los perfiles de actores (estudiantes y empresas), las ofertas de pasantía, las publicaciones de búsqueda, el proceso de postulaciones y la estructura de áreas y reportes. Esta representación permite observar cómo los servicios de seguridad e identidad de ASP.NET Core se relacionan con las entidades del dominio, garantizando una separación clara entre el control de accesos, la información curricular de los pasantes, las vacantes corporativas y los registros de vinculación institucional.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{diagrama-entidad-relacion-nicaworklink.png}
+\caption{Diagrama entidad-relación de NicaWorkLink}\label{fig:diagrama_er_nicaworklink}
+\end{figure}
+
+El diagrama entidad-relación de la Figura~\ref{fig:diagrama_er_nicaworklink} complementa el modelo anterior al presentar las tablas, claves y asociaciones previstas para la persistencia de datos. Su incorporación permite relacionar el diseño conceptual con la estructura de almacenamiento en PostgreSQL, especialmente en los elementos asociados a los usuarios, los perfiles de estudiante y de empresa, las ofertas de pasantía, las publicaciones de búsqueda, las postulaciones y los reportes de horas.
+
+\clearpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{diagrama-casos-uso-nicaworklink.png}
+\caption{Diagrama de casos de uso de NicaWorkLink}\label{fig:diagrama_casos_uso_nicaworklink}
+\end{figure}
+
+El diagrama de casos de uso de la Figura~\ref{fig:diagrama_casos_uso_nicaworklink} describe las interacciones previstas entre los actores de la plataforma (estudiante, empresa y administrador) y las funciones que cada uno podrá ejecutar. Para el estudiante se representan la consulta y postulación a ofertas, la publicación de su perfil de búsqueda y el registro de las horas de su pasantía; para la empresa, la publicación y gestión de ofertas, la revisión de postulaciones y el seguimiento de los pasantes; y para el administrador, la gestión de usuarios, de las áreas y de los reportes. Esta vista complementa el modelo de clases y el modelo relacional, porque describe el comportamiento esperado del sistema desde la perspectiva de quienes lo utilizan y sirve de base para las historias de usuario que se construyen en esta misma fase.
+
+\subsection{Fase 4. Demostración}
+
+Se ejecutará una prueba de concepto en un entorno de pruebas con datos de ejemplo. Los casos de prueba cubrirán los flujos principales de la plataforma: publicar una oferta, postularse a ella, aceptar o rechazar una postulación, registrar las horas de un pasante y verificar que cada rol solo acceda a lo que le corresponde. Con esto se comprobará que la plataforma resuelve las situaciones planteadas en el problema.
+
+\subsection{Fase 5. Evaluación}
+
+Se evaluará la plataforma midiendo los indicadores definidos en la matriz de trazabilidad (Tabla~\ref{tab:matriz-trazabilidad}), como el porcentaje de funciones completadas sin errores, la correcta actualización de las postulaciones, la coincidencia de las horas registradas, los accesos no autorizados bloqueados y los registros inconsistentes. Los resultados se compararán con los meta-requisitos de la Fase 2 para determinar cuáles se cumplen y cuáles requieren ajustes \parencite{sonnenberg2012}.
+
+\subsection{Fase 6. Comunicación}
+
+Los resultados de la investigación se presentarán en el informe de grado, siguiendo la estructura metodológica establecida para este tipo de proyectos \parencite{departamentociencias2023}, y se compartirán con la comunidad universitaria de la UNHSJM, CUR-Rivas.
+
+\subsection{Nivel táctico: metodología ágil (Scrum / XP)}
+
+El nivel táctico corresponde al proceso de construcción del software y se ejecuta dentro de la Fase 3 de la DSRM. Para organizar ese proceso se combinan Scrum y Extreme Programming (XP): Scrum se emplea para planificar y distribuir el trabajo de forma incremental, mientras que XP orienta las prácticas de ingeniería hacia la calidad técnica del código \parencite{beck2000,schwaber2020}. Esta combinación se apoya en la arquitectura definida para NicaWorkLink (Angular en el frontend, ASP.NET Core en el backend y PostgreSQL en la base de datos), de modo que las decisiones de diseño de la Fase 3 se traduzcan en incrementos verificables del sistema.
+
+\subsubsection{Gestión del desarrollo mediante Scrum}
+
+Scrum es un marco de trabajo iterativo e incremental que se apoya en la transparencia, la inspección y la adaptación para gestionar el trabajo \parencite{schwaber2020}. En NicaWorkLink, las funcionalidades pendientes se reunirán en un Product Backlog y cada meta-requisito de la Fase 2 se traducirá en una historia de usuario con la estructura «como [rol], quiero [función], para [beneficio]». El desarrollo se organizará en sprints de dos a tres semanas, con planificación al inicio y revisión y retrospectiva al final, de manera que cada incremento pueda valorarse contra los indicadores definidos para la Fase 5.
+
+\subsubsection{Prácticas de calidad técnica mediante Extreme Programming (XP)}
+
+Extreme Programming aporta las prácticas de ingeniería que sostienen la calidad del código durante los sprints \parencite{beck2000}. En NicaWorkLink se aplicarán las siguientes:
+
+\begin{itemize}
+	\item \textbf{Desarrollo guiado por pruebas (TDD):} se escribirán pruebas automatizadas antes del código funcional, sobre todo en las reglas de negocio de la plataforma: publicación de ofertas, cambios de estado de una postulación, cálculo de horas y control de accesos por rol.
+	\item \textbf{Refactorización continua:} se reestructurará el código sin cambiar su comportamiento, para mantener separadas las responsabilidades de la interfaz, los servicios y el acceso a datos.
+	\item \textbf{Programación en parejas y propiedad colectiva:} el código será responsabilidad de todo el equipo, mediante revisión conjunta y trabajo compartido en los módulos principales.
+	\item \textbf{Integración continua:} los cambios se integrarán con frecuencia y se ejecutarán las pruebas disponibles para detectar incompatibilidades entre el frontend, el backend y la base de datos.
+\end{itemize}
 
 \subsection{Nivel diagnóstico: estudio de mapeo sistemático (SMS)}
 
