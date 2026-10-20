@@ -44,7 +44,7 @@ Desarrollar una plataforma web para gestionar las pasantías y prácticas profes
 \begin{itemize}
 	\item Identificar la información que necesitan los estudiantes, las empresas y la universidad para organizar y gestionar de mejor manera el proceso de pasantías y prácticas profesionales.
 	\item Diseñar una plataforma web que centralice las oportunidades de pasantías disponibles en empresas de Rivas, permitiendo a los estudiantes consultar las ofertas y realizar sus postulaciones.
-	\item Implementar control de registro y seguimiento de las horas cumplidas por los estudiantes, que facilite a la universidad la supervisión y el control del avance de las pasantías.
+	\item Desarrollar control de registro y seguimiento de las horas cumplidas por los estudiantes, que facilite a la universidad la supervisión y el control del avance de las pasantías.
 \end{itemize}
 
 \newpage
@@ -342,3 +342,111 @@ El beneficio de utilizar estas herramientas en el proyecto será poder comprobar
 Aunque no afectará el funcionamiento del sistema, su beneficio para NicaWorkLink será mantener el código del frontend con un estilo visual consistente en todos los archivos, lo cual facilitará releer el propio código más adelante (por ejemplo, si se retoma el proyecto después de un tiempo) y sería especialmente útil si en algún momento más de una persona trabajara sobre el mismo código.
 
 En conjunto, todas las tecnologías que se utilizarán en NicaWorkLink son gratuitas, cuentan con documentación oficial extensa y comunidades activas de soporte, y varias de ellas (Angular, C\#, buenas prácticas de seguridad) ya forman parte de la formación previa del desarrollador, lo cual reducirá el tiempo necesario para aplicarlas correctamente en el proyecto. Por estas razones, se considera que NicaWorkLink es técnicamente viable.
+
+\newpage
+
+\subsection{Viabilidad económica}
+
+La viabilidad económica determina si un proyecto puede desarrollarse, operar y sostenerse con los recursos financieros disponibles, justificando sus costos frente a los beneficios que produce. A diferencia de la viabilidad técnica, que evalúa la viabilidad de construcción, la viabilidad económica confirma que la solución sea costeable y conveniente para la institución que la adopta.
+
+Este apartado analiza la viabilidad económica de NicaWorkLink desde la realidad institucional de la Universidad Nacional Héroes San José de las Mulas (UNHSJM). Como institución pública, la universidad no comercializa sus servicios; por tanto, NicaWorkLink no se concibe como un producto lucrativo, sino como una herramienta de acceso gratuito. Además, el desarrollo de la plataforma es un aporte de los autores como trabajo de grado, por lo que la universidad no paga por él. El análisis no plantea una evaluación de rentabilidad comercial, sino que determina el valor del sistema que la universidad recibe gratuitamente y los beneficios que este genera al utilizarlo.
+
+\textbf{Escenario único de operación.} El sistema se alojará en la infraestructura de la UNHSJM, aprovechando los servidores, la conectividad y los servicios web que la institución ya utiliza en otros procesos académicos. No se contemplan escenarios alternativos de alojamiento externo ni servicios en la nube de pago, ya que la propuesta central es anexar la plataforma a los recursos existentes. Bajo ese escenario, el desembolso real de la institución es prácticamente nulo, concentrando el análisis económico por completo en los beneficios.
+
+\textbf{Criterio de evaluación adoptado.} No se emplea el Valor Actual Neto (VAN) ni la Tasa Interna de Retorno (TIR). Estos indicadores suponen un proyecto de inversión con capital desembolsado que se espera recuperar mediante ingresos propios. En NicaWorkLink, el sistema no genera ingresos y el desarrollo es aportado por los estudiantes, sin desembolso por parte de la universidad. Calcular VAN o TIR implicaría tratar una donación académica como si fuera un gasto real. Por ello, los criterios adecuados son el beneficio neto, la relación beneficio-costo en su lectura más conservadora y el análisis de costo-efectividad; indicadores que responden directamente a cuánto cuesta de verdad sostener el sistema y cuánto gana la universidad con él.
+
+\subsubsection{Objetivo y enfoque del análisis}
+
+El objetivo es determinar la viabilidad económica de NicaWorkLink cuantificando el valor de mercado del sistema recibido, el desembolso real de la UNHSJM y los beneficios de su adopción. El análisis emplea el método de Costo Total de Propiedad (TCO) adaptado, separando tres componentes de forma explícita para no confundir valor con gasto:
+
+\begin{itemize}
+	\item \textbf{Valor de mercado del desarrollo:} estimación del esfuerzo de desarrollo valorizado a precio de mercado (lo que la universidad recibe, no un desembolso).
+	\item \textbf{Desembolso real de la universidad:} recursos que la institución eroga para poner el sistema en operación y sostenerlo.
+	\item \textbf{Beneficios:} valor del activo recibido y ahorro de recursos que la plataforma produce al ordenar el proceso de pasantías.
+\end{itemize}
+
+\subsubsection{Aprovechamiento de la infraestructura de la UNHSJM}
+
+\begin{itemize}
+	\item \textbf{Servidores y conectividad:} se alojará en los servidores existentes y usará la red ya disponible en las instalaciones (C\$0).
+	\item \textbf{Dominio y seguridad:} empleo del dominio institucional existente y certificados SSL gratuitos como Let's Encrypt (C\$0).
+	\item \textbf{Licencias y mantenimiento:} uso de un stack de código abierto (.NET, PostgreSQL, Angular). El mantenimiento correctivo y evolutivo será cubierto por el personal informático actual dentro de sus funciones, sin crear plazas nuevas (C\$0).
+\end{itemize}
+
+\subsubsection{Parámetros financieros de referencia}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{5.5cm}@{}}
+\caption{Parámetros financieros de referencia para la viabilidad económica de NicaWorkLink}\label{tab:parametros-financieros}\\
+\hline
+\textbf{Parámetro} & \textbf{Valor de referencia} & \textbf{Fuente / Detalle} \\
+\hline
+\endfirsthead
+\caption[]{Parámetros financieros de referencia para la viabilidad económica de NicaWorkLink (continuación)}\\
+\hline
+\textbf{Parámetro} & \textbf{Valor de referencia} & \textbf{Fuente / Detalle} \\
+\hline
+\endhead
+\hline
+\endlastfoot
+Tipo de cambio oficial 2026 & C\$36.6243 por US\$1 & Tipo de cambio oficial del BCN \parencite{bcn2025} \\
+\hline
+Salario mensual de referencia & C\$23,468.00 & Punto medio del rango de inicio \parencite{wageindicator2026} \\
+\hline
+Cargas sociales del empleador & +23.5\% & INSS (21.5\%) + INATEC (2\%) \parencite{inss} \\
+\hline
+Tarifa horaria calculada & C\$139.34 (US\$3.81) & Basada en jornada legal de 208 hrs/mes \\
+\hline
+Horizonte de evaluación & 5 años & Periodo estándar de evaluación de activo TI \\
+\end{longtable}
+
+\subsubsection{Valor de mercado del desarrollo recibido}
+
+El sistema comprende aproximadamente 30,700 líneas de código (7,828 en el backend y 22,871 en el frontend). Basado en la metodología Scrum, se estimó un esfuerzo de 1,020 horas-persona, distribuidas a razón de unas 340 horas entre cada uno de los tres autores.
+
+Aplicando la tarifa horaria de C\$139.34 a las 1,020 horas, el valor de mercado del desarrollo asciende a C\$142,128 (aprox. US\$3,881). Utilizando los extremos de la franja salarial inicial de \textcite{wageindicator2026}, el valor oscila entre C\$94,550 y C\$189,706. Este límite superior (US\$5,180) coincide con el precio de mercado de aplicaciones web a la medida en Centroamérica \parencite{meanconsultors2026}, validando así la estimación. Es vital reiterar que esta valorización dimensiona el activo tecnológico que se entrega, y no imputa un gasto real a la universidad.
+
+\subsubsection{Desembolso real de la universidad}
+
+Al aportar la infraestructura y conectividad, emplear software de código abierto y absorber el mantenimiento con el personal en funciones, la universidad no incurre en erogaciones adicionales. El costo real del proyecto para la UNHSJM, tanto de puesta en marcha como de operación, es de C\$0.00 por año.
+
+\subsubsection{Beneficios de la plataforma}
+
+\begin{itemize}
+	\item \textbf{Valor del software recibido:} activo tecnológico valorado en C\$142,128 que se entrega sin costo.
+	\item \textbf{Ahorro de tiempo administrativo:} reducción estimada de 20 horas mensuales (240 al año) en tareas manuales de publicación y control, equivalentes a C\$33,442 al año.
+	\item \textbf{Ahorro en materiales:} menos impresión y almacenamiento físico de expedientes, valorado en C\$4,000 anuales.
+	\item \textbf{Beneficio recurrente total:} C\$37,442 al año.
+\end{itemize}
+
+\subsubsection{Evaluación económica}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{5.5cm}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{5cm}@{}}
+\caption{Evaluación económica de NicaWorkLink a cinco años}\label{tab:evaluacion-economica}\\
+\hline
+\textbf{Concepto evaluado} & \textbf{Valor en C\$ (Córdobas)} & \textbf{Observaciones} \\
+\hline
+\endfirsthead
+\caption[]{Evaluación económica de NicaWorkLink a cinco años (continuación)}\\
+\hline
+\textbf{Concepto evaluado} & \textbf{Valor en C\$ (Córdobas)} & \textbf{Observaciones} \\
+\hline
+\endhead
+\hline
+\endlastfoot
+Desembolso real acumulado (5 años) & C\$0.00 & Sin gastos de inversión ni operación \\
+\hline
+Valor de mercado del activo recibido & C\$142,128.00 & Aporte a título gratuito por los autores \\
+\hline
+Ahorro operativo acumulado (5 años) & C\$187,210.00 & C\$37,442 anuales por 5 años \\
+\hline
+Beneficio neto para la universidad & C\$329,338.00 & Suma de activo recibido + ahorros 5 años \\
+\hline
+Relación beneficio-costo (conservadora) & 1.32 & Ahorro a 5 años $\div$ valor de mercado \\
+\end{longtable}
+
+La universidad recibe un beneficio neto de C\$329,338 sin realizar inversión económica. La relación beneficio-costo en su lectura conservadora (ahorro a 5 años $\div$ valor de mercado) demuestra que, incluso si la universidad tuviese que comprar el sistema a su precio comercial, los ahorros acumulados lo pagarían con creces.
+
+\subsubsection{Análisis de sensibilidad}
+
+Al someter los ahorros a recortes, el beneficio se mantiene robusto. Si los ahorros recurrentes caen un 50\%, el beneficio neto sigue siendo de C\$235,733. Si caen un 70\%, es de C\$198,291. El proyecto no depende de que los ahorros sean inmensos para ser viable; su fortaleza radica en que su costo real de sostenimiento es nulo.
+

@@ -1,2 +1,134 @@
 % Capítulo 3: Metodología
-% Propósito: Detallar el enfoque metodológico, diseño de investigación, técnicas e instrumentos de recolección de información y la metodología de desarrollo de software seleccionada.
+% Propósito: Detallar el enfoque metodológico (Design Science Research), la arquitectura metodológica de tres niveles, el plan de trabajo basado en la DSRM, el estudio de mapeo sistemático (SMS) y la matriz de trazabilidad e indicadores de evaluación.
+
+\section{Metodología}
+
+Esta investigación utilizará la metodología Design Science Research (DSR), o Investigación en Ciencia del Diseño, como guía de todo el trabajo. La DSR se usa mucho en Sistemas de Información y Ciencias de la Computación. Su meta no es solo describir un problema, sino crear una solución y comprobar que realmente sirve para resolverlo \parencite{hevner2004}.
+
+La elección de la DSR se justifica porque la contribución central de este trabajo no es un hallazgo descriptivo, sino una solución tecnológica concreta que se puede evaluar: NicaWorkLink. Este artefacto es una plataforma web que se propone con un fin claro: resolver las dificultades de un proceso de pasantías y prácticas profesionales que hoy se realiza de forma manual entre la UNHSJM, CUR-Rivas, y las empresas del municipio. Para lograrlo, la plataforma busca centralizar y automatizar esa gestión. Como lo que se propone es crear una solución a un problema práctico, y no solo estudiarlo, la DSR es el marco metodológico más adecuado.
+
+El trabajo se organiza conforme a la visión de tres ciclos interdependientes de la DSR \parencite{hevner2007}: el ciclo de relevancia, que conecta el problema real con la solución propuesta; el ciclo de rigor, que fundamenta la investigación en el conocimiento que ya existe; y el ciclo de diseño, en el que se construye y se evalúa el artefacto.
+
+\subsection{Ciclo de relevancia}
+
+Este ciclo une el problema real con la solución propuesta. Muestra que el problema existe y que vale la pena resolverlo. Hoy la gestión de pasantías y prácticas se hace de forma manual, y eso afecta a tres grupos: el personal de la universidad que gestiona las prácticas, las empresas locales del municipio y los estudiantes que buscan una pasantía. Esta necesidad se plantea en el planteamiento del problema. Este ciclo se cerrará en las secciones de viabilidad y en las conclusiones, donde se revisará si la propuesta responde a lo que cada grupo necesita.
+
+\subsection{Ciclo de rigor}
+
+El Ciclo de Rigor fundamenta esta investigación en el conocimiento que ya existe. El rigor de este trabajo se construirá a través de:
+
+\begin{itemize}
+	\item Los antecedentes nacionales e internacionales, que reúnen trabajos de grado y estudios sobre sistemas de gestión de pasantías y prácticas profesionales. Con ellos se identifican las soluciones existentes y lo que falta cubrir en Rivas.
+	\item El marco teórico, que respalda los conceptos y las tecnologías de la propuesta.
+	\item El marco normativo, que incluye la legislación sobre educación superior \parencite{ley89_1990,ley582}, protección de datos personales \parencite{ley787_2012}, relación laboral \parencite{ley185_1996} y propiedad intelectual del software \parencite{ley312_1999}.
+\end{itemize}
+
+\subsection{Ciclo de diseño}
+
+El Ciclo de Diseño es el ciclo central de esta investigación, donde se construye y se evalúa la plataforma NicaWorkLink de forma iterativa. Este ciclo abarca:
+
+\begin{itemize}
+	\item El diseño de la plataforma, con una arquitectura por capas formada por una interfaz web, un servicio central y una base de datos, tal como se describe en la viabilidad técnica.
+	\item La construcción de la plataforma, que se propone realizar con Scrum y XP, dividiendo el desarrollo en etapas cortas llamadas sprints, al final de las cuales se revisa lo avanzado y se ajusta lo necesario \parencite{schwaber2020,beck2000}.
+	\item La evaluación de la propuesta, mediante el análisis de viabilidad técnica, operativa, económica y legal.
+\end{itemize}
+
+\subsection{Plan de trabajo (DSRM)}
+
+Para llevar la DSR a la práctica, la investigación adopta un plan de trabajo basado en la Design Science Research Methodology (DSRM) de \textcite{peffers2007}, que ordena el proceso en fases y lo conecta con la construcción de la plataforma.
+
+\subsubsection{Arquitectura metodológica e integración de enfoques}
+
+La presente investigación aborda una arquitectura metodológica de tres niveles, que une la investigación científica, la revisión del estado del arte y la ingeniería de software dentro de un mismo proceso. Cada nivel cumple una función propia y todos se desarrollan dentro del ciclo de la DSRM.
+
+\textbf{Nivel macro: investigación científica.} El proyecto se conduce con la DSRM de \textcite{peffers2007}, que lo guía desde la identificación del problema hasta la comunicación de los resultados. Este enfoque, de carácter práctico, respalda la necesidad del problema, la utilidad del artefacto y el rigor con que se construye \parencite{hevner2004,wieringa2014}. Su aplicación en contextos de gestión y de organizaciones ha sido ampliada en propuestas recientes \parencite{opdenakker2025}.
+
+\textbf{Nivel diagnóstico: revisión del estado del arte.} Al inicio de la DSRM se realiza un Estudio de Mapeo Sistemático (Systematic Mapping Study, SMS) con el protocolo de \textcite{petersen2008}. Este estudio ordena la literatura sobre gestión de pasantías y prácticas profesionales, clasifica las soluciones existentes e identifica los vacíos de investigación sobre los que se apoya la propuesta.
+
+\textbf{Nivel táctico: desarrollo de software.} La construcción del software se ejecuta dentro de la fase de diseño y desarrollo, mediante un marco ágil híbrido. Scrum \parencite{schwaber2020} conduce la gestión incremental del trabajo por medio de sprints y de una lista de pendientes. Extreme Programming, o XP \parencite{beck2000}, sostiene la calidad técnica con pruebas continuas, refactorización y desarrollo guiado por pruebas.
+
+\subsubsection{Ciclo DSRM y tipo de artefacto}
+
+El marco científico seguirá las seis fases iterativas del ciclo de \textcite{peffers2007} y las pautas para la acumulación del conocimiento de diseño \parencite{vombrocke2020,desordi2021}. El aporte principal se clasificará como una instanciación: la plataforma web NicaWorkLink, que se construirá como un sistema funcional y se probará en un entorno que reproduzca su uso real. Esta instanciación se apoyará en tres artefactos intermedios, según la clasificación de \textcite{hevner2004}:
+
+\begin{itemize}
+	\item \textbf{Constructo:} el vocabulario del dominio, formado por conceptos como pasantía, práctica profesional, oferta, postulación, empresa y reporte de horas.
+	\item \textbf{Modelo:} las representaciones que vinculan el problema con la solución, entre ellas el diagrama entidad-relación, los diagramas de clases, los diagramas de casos de uso y la arquitectura del sistema.
+	\item \textbf{Método:} las reglas y procesos que se incorporarán en el código, como la publicación de ofertas, la postulación, la aceptación o rechazo de postulaciones y el registro de horas.
+\end{itemize}
+
+\subsubsection{Desarrollo de las fases del marco DSRM}
+
+\textbf{Fase 1. Identificación del problema y motivación.} En esta fase se documentará el proceso actual de gestión de pasantías y prácticas profesionales en la UNHSJM, CUR-Rivas, desde que una empresa ofrece una plaza hasta que se registran las horas del estudiante. Se identificarán los puntos del proceso que se realizan de forma manual y las dificultades que esto genera para el personal universitario, las empresas del municipio y los estudiantes. La relevancia del problema se sustentará con los antecedentes nacionales e internacionales, con el marco normativo y con el contexto de Rivas \parencite{peffers2007}.
+
+\textbf{Fase 2. Definición de los objetivos de la solución.} A partir del problema identificado, se definirán los meta-requisitos de NicaWorkLink, agrupados según los tres tipos de usuario de la plataforma: estudiante, empresa y administrador. Estos meta-requisitos establecerán qué debe lograr la plataforma para centralizar y automatizar la gestión de pasantías, y qué la distingue de las soluciones encontradas en el mapeo sistemático. Cada uno quedará registrado en la matriz de trazabilidad, con su indicador de evaluación.
+
+\textbf{Fase 3. Diseño y desarrollo.} En esta fase se diseñará la plataforma y se construirá por etapas. Se propondrá una arquitectura por capas (Clean Architecture), con una interfaz web, un servicio central y una base de datos relacional, según se detalla en la viabilidad técnica. Se elaborarán los modelos que respaldan el diseño: el diagrama entidad-relación, los diagramas de clases y los diagramas de casos de uso. La construcción se organizará en sprints con Scrum y XP, y cada meta-requisito se traducirá en historias de usuario.
+
+\textbf{Fase 4. Demostración.} Se ejecutará una prueba de concepto en un entorno de pruebas con datos de ejemplo. Los casos de prueba cubrirán los flujos principales de la plataforma: publicar una oferta, postularse a ella, aceptar o rechazar una postulación, registrar las horas de un pasante y verificar que cada rol solo acceda a lo que le corresponde. Con esto se comprobará que la plataforma resuelve las situaciones planteadas en el problema.
+
+\textbf{Fase 5. Evaluación.} Se evaluará la plataforma midiendo los indicadores definidos en la matriz de trazabilidad, como el porcentaje de funciones completadas sin errores, la correcta actualización de las postulaciones, la coincidencia de las horas registradas, los accesos no autorizados bloqueados y los registros inconsistentes. Los resultados se compararán con los meta-requisitos de la Fase 2 para determinar cuáles se cumplen y cuáles requieren ajustes \parencite{sonnenberg2012}.
+
+\textbf{Fase 6. Comunicación.} Los resultados de la investigación se presentarán en el informe de grado, siguiendo la estructura metodológica establecida para este tipo de proyectos \parencite{departamentociencias2023}, y se compartirán con la comunidad universitaria de la UNHSJM, CUR-Rivas.
+
+\subsection{Nivel diagnóstico: estudio de mapeo sistemático (SMS)}
+
+El estudio de mapeo sistemático se guiará por las preguntas de investigación del relevamiento y aplicará el protocolo de extracción y clasificación de \textcite{petersen2008}, según se resume en la Tabla~\ref{tab:sms-protocolo}.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Preguntas de investigación y protocolo de extracción y clasificación del SMS}\label{tab:sms-protocolo}
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\rowcolor{gray!15}
+\textbf{Preguntas de investigación del relevamiento (RQs)} & \textbf{Protocolo de extracción y clasificación} \\ \hline
+\textbf{RQ1:} ¿Qué sistemas o plataformas tecnológicas se han propuesto en la literatura para gestionar pasantías y prácticas profesionales entre universidades, empresas y estudiantes?
+\vspace{0.2cm}
+
+\textbf{RQ2:} ¿Qué enfoques de diseño, métodos o arquitecturas utilizan con más frecuencia esas soluciones?
+\vspace{0.2cm}
+
+\textbf{RQ3:} ¿Qué limitaciones o vacíos de investigación (\textit{research gaps}) siguen sin resolverse en las soluciones existentes? &
+\textbf{Estrategia de búsqueda:} se buscará en bases de datos académicas y en repositorios de tesis universitarias, en español y en inglés, con cadenas de búsqueda que combinen los términos clave del dominio en ambos idiomas (por ejemplo, ``gestión de pasantías'', ``prácticas profesionales'', ``sistema web'' e ``internship management'').
+\vspace{0.2cm}
+
+\textbf{Selección (inclusión y exclusión):} se revisarán títulos, resúmenes y palabras clave, y el texto completo cuando haya dudas. Se incluirán los estudios que presenten una solución tecnológica para gestionar pasantías o prácticas, publicados desde 2015, y se excluirán los duplicados y los documentos sin texto completo.
+\vspace{0.2cm}
+
+\textbf{Clasificación (\textit{keywording}):} cada estudio se agrupará según el tipo de solución (ofertas, postulación, seguimiento de horas, comunicación universidad-empresa), el tipo de aporte (método, herramienta o modelo) y el tipo de investigación (propuesta de solución o evaluación).
+\vspace{0.2cm}
+
+\textbf{Extracción y mapeo:} los datos de cada estudio (año, país, funciones, arquitectura y limitaciones) se registrarán en una matriz. Con ella se elaborará un gráfico de burbujas (\textit{bubble plot}) que muestre cuántos estudios hay por categoría e identifique los temas poco explorados. \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsection{Matriz de trazabilidad e indicadores de evaluación}
+
+Se establecerá una matriz que conecte cada necesidad de la solución con la decisión de diseño que la resuelve, la unidad de desarrollo que la construye y el indicador con el que se evaluará. La Tabla~\ref{tab:matriz-trazabilidad} presenta esa correspondencia.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{4.5cm}@{}}
+\caption{Matriz de trazabilidad entre meta-requisitos, decisiones de diseño, unidades de desarrollo e indicadores de evaluación}\label{tab:matriz-trazabilidad}\\
+\hline
+\textbf{Meta-requisito (Fase 2)} & \textbf{Meta-diseño (Fase 3)} & \textbf{Historia / Sprint} & \textbf{Indicador de evaluación (Fase 5)} \\
+\hline
+\endfirsthead
+\caption[]{Matriz de trazabilidad entre meta-requisitos, decisiones de diseño, unidades de desarrollo e indicadores de evaluación (continuación)}\\
+\hline
+\textbf{Meta-requisito (Fase 2)} & \textbf{Meta-diseño (Fase 3)} & \textbf{Historia / Sprint} & \textbf{Indicador de evaluación (Fase 5)} \\
+\hline
+\endhead
+\hline
+\endlastfoot
+MR-01: Centralizar la gestión de pasantías en un solo sistema para estudiantes, empresas y universidad. & MD-01: Arquitectura por capas (Clean Architecture) con interfaz web, servicio central y base de datos relacional. & US-01 / Sprint 1 & Porcentaje de funciones principales completadas sin errores en las pruebas. \\
+\hline
+MR-02: Permitir que las empresas publiquen ofertas y que los estudiantes se postulen. & MD-02: Módulos de ofertas y postulaciones, con estados de la postulación (pendiente, aceptada, rechazada). & US-02, US-03 / Sprint 2 & Porcentaje de postulaciones que cambian de estado correctamente en las pruebas. \\
+\hline
+MR-03: Controlar el avance de cada pasante mediante el registro de horas. & MD-03: Módulo de reportes de horas vinculado a cada postulación aceptada, con seguimiento de horas acumuladas. & US-04 / Sprint 3 & Diferencia entre las horas registradas y las que muestra el sistema (meta: 0). \\
+\hline
+MR-04: Dar a cada tipo de usuario acceso solo a lo que le corresponde. & MD-04: Autenticación con tokens (JWT) y permisos por rol: estudiante, empresa y administrador. & US-05 / Sprint 1 & Accesos no autorizados bloqueados en las pruebas (meta: 100\,\%). \\
+\hline
+MR-05: Proteger los datos personales y mantener la integridad de la información. & MD-05: Modelo relacional normalizado en PostgreSQL, con restricciones de datos y manejo de errores, conforme a la Ley 787. & US-06 / Sprint 3 & Registros inconsistentes o con error en las pruebas (meta: 0). \\
+\hline
+MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: Interfaz con navegación guiada, validación de formularios en tiempo real y tableros con gráficos. & US-07, US-08 / Sprint 4 & Porcentaje de tareas completadas sin ayuda en las pruebas de uso. \\
+\end{longtable}
