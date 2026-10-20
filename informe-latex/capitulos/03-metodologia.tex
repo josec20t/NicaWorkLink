@@ -204,3 +204,147 @@ MR-05: Proteger los datos personales y mantener la integridad de la información
 \hline
 MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: Interfaz con navegación guiada, validación de formularios en tiempo real y tableros con gráficos. & US-07, US-08 / Sprint 4 & Porcentaje de tareas completadas sin ayuda en las pruebas de uso. \\
 \end{longtable}
+
+% ------------------------------------------------
+% CRONOGRAMA DE ACTIVIDADES
+% ------------------------------------------------
+\begin{landscape}
+	\begin{center}
+		
+		{\Large\bfseries Cronograma de Actividades}
+		
+		\vspace{0.5cm}
+		
+		\begin{ganttchart}[
+			hgrid,
+			vgrid,
+			x unit=3.2cm,
+			y unit chart=0.65cm,
+			bar height=0.48,
+			group height=0.48,
+			bar label font=\small,
+			group label font=\small\bfseries,
+			title label font=\small\bfseries,
+			title/.style={
+				fill=gray!15,
+				draw=gray!50
+			},
+			bar/.style={
+				rounded corners=2pt
+			}
+			]{1}{4}
+			
+			% ------------------------------------------------
+			% SEMANAS
+			% ------------------------------------------------
+			
+			\gantttitle{Semana 1}{1}
+			\gantttitle{Semana 2}{1}
+			\gantttitle{Semana 3}{1}
+			\gantttitle{Semana 4}{1}\\
+			
+			\gantttitle{7--12 sep.}{1}
+			\gantttitle{14--18 sep.}{1}
+			\gantttitle{21--25 sep.}{1}
+			\gantttitle{28 sep.--2 oct.}{1}\\
+			
+			% ------------------------------------------------
+			% ACTIVIDADES TERMINADAS
+			% ------------------------------------------------
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Revisión Bibliográfica}{1}{1}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Objetivos y Tema}{1}{1}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Planteamiento del problema}{2}{2}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Alcances y Limitaciones}{2}{2}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Marco Teórico}{2}{2}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Factibilidad del proyecto}{3}{3}\\
+			
+			% ------------------------------------------------
+			% METODOLOGÍA
+			% ------------------------------------------------
+			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Metodología}{4}{4}\\
+			
+			% ------------------------------------------------
+			% TEMA
+			% ------------------------------------------------
+			
+			\ganttbar[
+			bar/.style={
+				fill=none,
+				draw=none
+			},
+			bar label font=\small\bfseries
+			]{Desarrollo del Software / Backend}{4}{4}\\
+			
+			% ------------------------------------------------
+			% ACTIVIDADES DEL TEMA
+			% ------------------------------------------------
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Diagrama Entidad--Relación}{1}{1}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Diagrama de Casos de Uso}{1}{1}\\
+			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Usuarios, roles y CRUD}{2}{2} \\
+			
+			% ------------------------------------------------
+			% NUEVO TEMA
+			% ------------------------------------------------
+			
+			\ganttbar[
+			bar/.style={
+				fill=none,
+				draw=none
+			},
+			bar label font=\small\bfseries
+			]{Metodología de Desarrollo de Software SCRUM- XP}{4}{4}\\
+			
+			% ACTIVIDADES DE LA METODOLOGÍA:
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Sprint 1 / Planificación}{3}{3}\\
+			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Sprint 2 / Pruebas}{4}{4}
+			
+		\end{ganttchart}
+		
+		\vspace{0.5cm}
+		
+		% ------------------------------------------------
+		% LEYENDA
+		% ------------------------------------------------
+		
+		\begin{tabular}{c l @{\hspace{1.5cm}} c l}
+			\textcolor{terminada}{\rule{0.8cm}{0.35cm}} & Actividad terminada &
+			\textcolor{enproceso}{\rule{0.8cm}{0.35cm}} & Actividad en proceso
+		\end{tabular}
+		
+	\end{center}
+\end{landscape}
