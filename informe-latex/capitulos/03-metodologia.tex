@@ -102,7 +102,7 @@ El diagrama de clases presentado en la Figura~\ref{fig:diagrama_clases_nicaworkl
 
 El diagrama entidad-relación de la Figura~\ref{fig:diagrama_er_nicaworklink} complementa el modelo anterior al presentar las tablas, claves y asociaciones previstas para la persistencia de datos. Su incorporación permite relacionar el diseño conceptual con la estructura de almacenamiento en PostgreSQL, especialmente en los elementos asociados a los usuarios, los perfiles de estudiante y de empresa, las ofertas de pasantía, las publicaciones de búsqueda, las postulaciones y los reportes de horas.
 
-\clearpage
+
 
 \begin{figure}[htbp]
 \centering
@@ -348,3 +348,43 @@ MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: 
 		
 	\end{center}
 \end{landscape}
+
+\subsection{Plan de ejecución}
+
+El plan de ejecución organizamos los pasos con los que debemos iniciar para esta investigación por cada objetivo específico. Para cada acción indica qué se hará, con qué instrumento se verificará, quiénes participarán y qué resultado se espera obtener. De esta manera, el plan conecta las fases de la DSRM con el trabajo de diseño y desarrollo de NicaWorkLink y sirve de guía para el seguimiento del avance del proyecto. La Tabla~\ref{tab:plan-ejecucion} presenta el plan de ejecución.
+
+% ------------------------------------------------
+% PLAN DE EJECUCIÓN
+% ------------------------------------------------
+\begin{landscape}
+	\footnotesize
+	\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{5.1cm}>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.8cm}@{}}
+	\caption{Plan de ejecución}\label{tab:plan-ejecucion}\\
+	\hline
+	\rowcolor{gray!15}
+	\textbf{Objetivos} & \textbf{Acciones} & \textbf{Descripción de las acciones} & \textbf{Instrumento de verificación} & \textbf{Protagonistas} & \textbf{Resultados esperados} \\
+	\hline
+	\endfirsthead
+	\caption[]{Plan de ejecución (continuación)}\\
+	\hline
+	\rowcolor{gray!15}
+	\textbf{Objetivos} & \textbf{Acciones} & \textbf{Descripción de las acciones} & \textbf{Instrumento de verificación} & \textbf{Protagonistas} & \textbf{Resultados esperados} \\
+	\hline
+	\endhead
+	\hline
+	\endlastfoot
+	OE1 & Revisión documental y mapeo sistemático & Buscar, seleccionar y clasificar estudios sobre sistemas de gestión de pasantías y prácticas profesionales, en español y en inglés, para responder las preguntas de investigación del mapeo. & Cadenas de búsqueda, criterios de inclusión y exclusión y matriz de extracción. & Equipo investigador. & Soluciones existentes clasificadas y vacíos de investigación identificados. \\
+	\hline
+	OE1 & Definición de meta-requisitos & Formular lo que debe lograr la plataforma para los usuarios (visitante, estudiante, empresa y administrador) y relacionarlo con las necesidades identificadas. & Matriz de meta-requisitos. & Equipo investigador. & Meta-requisitos definidos y vinculados a los modelos de diseño. \\
+	\hline
+	OE2 & Planificación con Scrum & Convertir cada meta-requisito en historias de usuario, registrarlas en Trello como Product Backlog y organizarlas en sprints de dos a tres semanas. & Tablero de Trello y matriz de trazabilidad. & Equipo de desarrollo y asesoría académica. & Historias vinculadas a los meta-requisitos y distribuidas en sprints. \\
+	\hline
+	OE2 & Diseño de la arquitectura & Definir una arquitectura por capas (Clean Architecture) con Angular, ASP.NET Core, PostgreSQL, JWT y Cloudinary. & Documento de arquitectura y esquema de componentes. & Equipo de desarrollo. & Arquitectura y responsabilidades de cada componente definidas. \\
+	\hline
+	OE2 & Modelado de datos, clases y casos de uso & Elaborar los diagramas de clases, entidad-relación y casos de uso. & Diagramas de clases, entidad-relación y casos de uso. & Equipo de desarrollo y asesoría académica. & Modelos que representan las entidades y las funciones de cada actor. \\
+	\hline
+	OE3 & Demostración y evaluación & Ejecutar una prueba de concepto con datos de ejemplo en los flujos principales y comparar los resultados con los meta-requisitos. & Casos de prueba e indicadores de la matriz de trazabilidad. & Equipo de desarrollo, asesoría académica y usuarios de prueba. & Meta-requisitos cumplidos y ajustes necesarios identificados. \\
+	\hline
+	\end{longtable}
+\end{landscape}
+
