@@ -208,23 +208,27 @@ MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: 
 % ------------------------------------------------
 % CRONOGRAMA DE ACTIVIDADES
 % ------------------------------------------------
+
 \begin{landscape}
-	\begin{center}
+	
+	% Desplazamos todo el bloque hacia la izquierda para ganar margen derecho
+	\noindent\hspace{-1.2cm}
+	\begin{minipage}{\linewidth}
 		
 		{\Large\bfseries Cronograma de Actividades}
 		
-		\vspace{0.5cm}
+		\vspace{0.3cm}
 		
 		\begin{ganttchart}[
 			hgrid,
 			vgrid,
-			x unit=3.2cm,
-			y unit chart=0.65cm,
-			bar height=0.48,
-			group height=0.48,
-			bar label font=\small,
-			group label font=\small\bfseries,
-			title label font=\small\bfseries,
+			x unit=1.9cm,          % <--- Buen ancho horizontal
+			y unit chart=0.48cm,   % <--- Altura controlada verticalmente
+			bar height=0.40,       
+			group height=0.40,     
+			bar label font=\sffamily\small,     
+			group label font=\sffamily\small\bfseries,
+			title label font=\sffamily\small\bfseries,
 			title/.style={
 				fill=gray!15,
 				draw=gray!50
@@ -232,21 +236,27 @@ MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: 
 			bar/.style={
 				rounded corners=2pt
 			}
-			]{1}{4}
+			]{1}{7}
 			
 			% ------------------------------------------------
-			% SEMANAS
+			% SEMANAS (1 a 7)
 			% ------------------------------------------------
 			
 			\gantttitle{Semana 1}{1}
 			\gantttitle{Semana 2}{1}
 			\gantttitle{Semana 3}{1}
-			\gantttitle{Semana 4}{1}\\
+			\gantttitle{Semana 4}{1}
+			\gantttitle{Semana 5}{1}
+			\gantttitle{Semana 6}{1}
+			\gantttitle{Semana 7}{1}\\
 			
 			\gantttitle{7--12 sep.}{1}
 			\gantttitle{14--18 sep.}{1}
 			\gantttitle{21--25 sep.}{1}
-			\gantttitle{28 sep.--2 oct.}{1}\\
+			\gantttitle{28 sep.--2 oct.}{1}
+			\gantttitle{5--9 oct.}{1}
+			\gantttitle{12--16 oct.}{1}
+			\gantttitle{19--23 oct.}{1}\\
 			
 			% ------------------------------------------------
 			% ACTIVIDADES TERMINADAS
@@ -281,11 +291,19 @@ MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: 
 			% ------------------------------------------------
 			
 			\ganttbar[
-			bar/.style={fill=enproceso}
+			bar/.style={fill=terminada}
 			]{Metodología}{4}{4}\\
 			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Plan de Ejecución}{6}{6}\\
+			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Resultados del Plan de Ejecución}{7}{7}\\
+			
 			% ------------------------------------------------
-			% TEMA
+			% TEMA: BACKEND
 			% ------------------------------------------------
 			
 			\ganttbar[
@@ -296,10 +314,6 @@ MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: 
 			bar label font=\small\bfseries
 			]{Desarrollo del Software / Backend}{4}{4}\\
 			
-			% ------------------------------------------------
-			% ACTIVIDADES DEL TEMA
-			% ------------------------------------------------
-			
 			\ganttbar[
 			bar/.style={fill=terminada}
 			]{Diagrama Entidad--Relación}{1}{1}\\
@@ -309,11 +323,23 @@ MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: 
 			]{Diagrama de Casos de Uso}{1}{1}\\
 			
 			\ganttbar[
-			bar/.style={fill=enproceso}
-			]{Usuarios, roles y CRUD}{2}{2} \\
+			bar/.style={fill=terminada}
+			]{Usuarios, Roles y Dashboard (CRUD)}{2}{2}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Perfiles: Empresa y Estudiante (CRUD)}{3}{3}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Ofertas de Pasantías y Búsquedas (CRUD)}{4}{4}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Postulaciones y Reportes de Horas (CRUD)}{4}{4}\\
 			
 			% ------------------------------------------------
-			% NUEVO TEMA
+			% METODOLOGÍA SCRUM-XP
 			% ------------------------------------------------
 			
 			\ganttbar[
@@ -324,30 +350,65 @@ MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: 
 			bar label font=\small\bfseries
 			]{Metodología de Desarrollo de Software SCRUM- XP}{4}{4}\\
 			
-			% ACTIVIDADES DE LA METODOLOGÍA:
 			\ganttbar[
 			bar/.style={fill=enproceso}
 			]{Sprint 1 / Planificación}{3}{3}\\
 			
 			\ganttbar[
 			bar/.style={fill=enproceso}
-			]{Sprint 2 / Pruebas}{4}{4}
+			]{Sprint 2 / Pruebas}{4}{4}\\
+			
+			% ------------------------------------------------
+			% TEMA: FRONTEND
+			% ------------------------------------------------
+			
+			\ganttbar[
+			bar/.style={
+				fill=none,
+				draw=none
+			},
+			bar label font=\small\bfseries
+			]{Desarrollo del Software FRONTEND}{5}{5}\\
+			
+			\ganttbar[
+			bar/.style={fill=terminada}
+			]{Diseño de Layouts, landing page e Interfaz de Autenticación}{4}{4}\\
+			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Vistas de Perfiles (Estudiante y Empresa)}{5}{5}\\
+			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Módulo de Ofertas y Postulaciones}{6}{6}\\
+			
+			\ganttbar[
+			bar/.style={fill=enproceso}
+			]{Gestión de Reportes y Dashboard}{7}{7}\\
 			
 		\end{ganttchart}
 		
-		\vspace{0.5cm}
+		\vspace{0.4cm}
 		
 		% ------------------------------------------------
 		% LEYENDA
 		% ------------------------------------------------
 		
 		\begin{tabular}{c l @{\hspace{1.5cm}} c l}
-			\textcolor{terminada}{\rule{0.8cm}{0.35cm}} & Actividad terminada &
-			\textcolor{enproceso}{\rule{0.8cm}{0.35cm}} & Actividad en proceso
+			
+			\textcolor{terminada}{\rule{0.8cm}{0.35cm}}
+			& Actividad terminada
+			
+			&
+			\textcolor{enproceso}{\rule{0.8cm}{0.35cm}}
+			& Actividad en proceso
+			
 		\end{tabular}
 		
-	\end{center}
+	\end{minipage}
+	
 \end{landscape}
+
 
 \subsection{Plan de ejecución}
 
