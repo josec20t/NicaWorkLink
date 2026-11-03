@@ -175,35 +175,199 @@ El estudio de mapeo sistemático se guiará por las preguntas de investigación 
 \end{tabularx}
 \end{table}
 
-\subsection{Matriz de trazabilidad e indicadores de evaluación}
+\clearpage
 
-Se establecerá una matriz que conecte cada necesidad de la solución con la decisión de diseño que la resuelve, la unidad de desarrollo que la construye y el indicador con el que se evaluará. La Tabla~\ref{tab:matriz-trazabilidad} presenta esa correspondencia.
+\subsection{Matriz de Meta-Diseños}
 
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{4.5cm}@{}}
-\caption{Matriz de trazabilidad entre meta-requisitos, decisiones de diseño, unidades de desarrollo e indicadores de evaluación}\label{tab:matriz-trazabilidad}\\
-\hline
-\textbf{Meta-requisito (Fase 2)} & \textbf{Meta-diseño (Fase 3)} & \textbf{Historia / Sprint} & \textbf{Indicador de evaluación (Fase 5)} \\
-\hline
-\endfirsthead
-\caption[]{Matriz de trazabilidad entre meta-requisitos, decisiones de diseño, unidades de desarrollo e indicadores de evaluación (continuación)}\\
-\hline
-\textbf{Meta-requisito (Fase 2)} & \textbf{Meta-diseño (Fase 3)} & \textbf{Historia / Sprint} & \textbf{Indicador de evaluación (Fase 5)} \\
-\hline
-\endhead
-\hline
-\endlastfoot
-MR-01: Centralizar la gestión de pasantías en un solo sistema para estudiantes, empresas y universidad. & MD-01: Arquitectura por capas (Clean Architecture) con interfaz web, servicio central y base de datos relacional. & US-01 / Sprint 1 & Porcentaje de funciones principales completadas sin errores en las pruebas. \\
-\hline
-MR-02: Permitir que las empresas publiquen ofertas y que los estudiantes se postulen. & MD-02: Módulos de ofertas y postulaciones, con estados de la postulación (pendiente, aceptada, rechazada). & US-02, US-03 / Sprint 2 & Porcentaje de postulaciones que cambian de estado correctamente en las pruebas. \\
-\hline
-MR-03: Controlar el avance de cada pasante mediante el registro de horas. & MD-03: Módulo de reportes de horas vinculado a cada postulación aceptada, con seguimiento de horas acumuladas. & US-04 / Sprint 3 & Diferencia entre las horas registradas y las que muestra el sistema (meta: 0). \\
-\hline
-MR-04: Dar a cada tipo de usuario acceso solo a lo que le corresponde. & MD-04: Autenticación con tokens (JWT) y permisos por rol: estudiante, empresa y administrador. & US-05 / Sprint 1 & Accesos no autorizados bloqueados en las pruebas (meta: 100\,\%). \\
-\hline
-MR-05: Proteger los datos personales y mantener la integridad de la información. & MD-05: Modelo relacional normalizado en PostgreSQL, con restricciones de datos y manejo de errores, conforme a la Ley 787. & US-06 / Sprint 3 & Registros inconsistentes o con error en las pruebas (meta: 0). \\
-\hline
-MR-06: Facilitar el uso a personas con poca experiencia en el sistema. & MD-06: Interfaz con navegación guiada, validación de formularios en tiempo real y tableros con gráficos. & US-07, US-08 / Sprint 4 & Porcentaje de tareas completadas sin ayuda en las pruebas de uso. \\
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.8cm}>{\raggedright\arraybackslash}p{1.8cm}>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{3.0cm}@{}}
+	\caption{Matriz de meta-diseños asociados a los meta-requisitos de NicaWorkLink}\label{tab:matriz-metadisenos}\\
+	\hline
+	\textbf{Código} & \textbf{MR asociado} & \textbf{Decisión de diseño} & \textbf{Historias} & \textbf{Verificación} & \textbf{Indicador de evaluación (Fase 5)} \\
+	\hline
+	\endfirsthead
+	\caption[]{Matriz de meta-diseños asociados a los meta-requisitos de NicaWorkLink (continuación)}\\
+	\hline
+	\textbf{Código} & \textbf{MR asociado} & \textbf{Decisión de diseño} & \textbf{Historias} & \textbf{Verificación} & \textbf{Indicador de evaluación (Fase 5)} \\
+	\hline
+	\endhead
+	\hline
+	\endlastfoot
+	MD-01 & MR-01 & Arquitectura por capas (Clean Architecture) con ASP.NET Core, Entity Framework Core y PostgreSQL en el backend, y Angular en el frontend. & HU-01, HU-06, HU-07, HU-08, HU-13 & El sistema arranca y se conecta a la base de datos; las altas y los cambios se guardan y se consultan correctamente. & Porcentaje de funciones principales completadas sin errores en las pruebas. \\
+	\hline
+	MD-02 & MR-02 & Módulos de ofertas y postulaciones, con estados de la postulación (pendiente, aceptada, rechazada) y validación de vacantes disponibles. & HU-05, HU-09, HU-10, HU-11, HU-12, HU-18 & Solo se permiten cambios de estado válidos; no se acepta una postulación si no hay vacantes. & Porcentaje de postulaciones que cambian de estado correctamente en las pruebas. \\
+	\hline
+	MD-03 & MR-03 & Módulo de reportes de horas en el que la empresa registra las horas de cada pasante con postulación aceptada; el estudiante consulta, descarga e imprime su reporte, y la universidad supervisa el avance. & HU-14, HU-15, HU-16, HU-19 & No se registran horas sin una postulación aceptada; el estudiante no puede modificar sus horas; el reporte descargable coincide con las horas guardadas. & Diferencia entre las horas registradas y las que muestra el sistema (meta: 0). \\
+	\hline
+	MD-04 & MR-04 & Autenticación con tokens (JWT) y permisos por rol (estudiante, empresa y administrador). & HU-02, HU-03, HU-04 & Se rechaza el acceso a datos o funciones de otro rol, también desde la API. & Accesos no autorizados bloqueados en las pruebas (meta: 100\,\%). \\
+	\hline
+	MD-05 & MR-05 & Modelo relacional normalizado en PostgreSQL (Figura 2), con restricciones de datos, manejo de errores y las medidas de la Ley 787. & HU-22 & No quedan registros huérfanos ni inconsistentes; los errores se informan con mensajes claros. & Registros inconsistentes o con error en las pruebas (meta: 0). \\
+	\hline
+	MD-06 & MR-06 & Interfaz con navegación guiada, validación de formularios en tiempo real y paneles con gráficos para cada perfil. & HU-20, HU-21 & Los formularios avisan los errores al escribir; cada perfil ve sus indicadores. & Porcentaje de tareas completadas sin ayuda en las pruebas de uso. \\
 \end{longtable}
+
+\clearpage
+
+
+\subsection{Matriz de trazabilidad de usuario}
+
+Las historias de usuario se obtienen de los casos de uso de la Figura~\ref{fig:diagrama_casos_uso_nicaworklink}. Cada una se relaciona con uno o más meta-requisitos y con el módulo funcional al que pertenece, de modo que ningún caso de uso quede sin respaldo en un meta-requisito. Los vínculos son una propuesta de trazabilidad y se confirmarán con las historias registradas en Trello.
+
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{7.5cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{3.8cm}@{}}
+	\caption{Matriz de trazabilidad entre historias de usuario y meta-requisitos}\label{tab:matriz-historias-mr}\\
+	\hline
+	\textbf{Historia} & \textbf{Resumen} & \textbf{Meta-requisitos} & \textbf{Área funcional} \\
+	\hline
+	\endfirsthead
+	\caption[]{Matriz de trazabilidad entre historias de usuario y meta-requisitos (continuación)}\\
+	\hline
+	\textbf{Historia} & \textbf{Resumen} & \textbf{Meta-requisitos} & \textbf{Área funcional} \\
+	\hline
+	\endhead
+	\hline
+	\endlastfoot
+	HU-01 & Preparar backend, base de datos y estructura de capas & MR-01 & Infraestructura y persistencia \\
+	\hline
+	HU-02 & Registrarse en la plataforma & MR-01, MR-04 & Acceso al sistema \\
+	\hline
+	HU-03 & Iniciar y cerrar sesión & MR-04 & Acceso al sistema \\
+	\hline
+	HU-04 & Acceder a funciones según el rol & MR-04 & Acceso al sistema \\
+	\hline
+	HU-05 & Consultar información pública y explorar ofertas & MR-02 & Acceso al sistema y ofertas de pasantía \\
+	\hline
+	HU-06 & Gestionar el perfil de estudiante & MR-01 & Perfiles de usuario \\
+	\hline
+	HU-07 & Gestionar el perfil de empresa & MR-01 & Perfiles de usuario \\
+	\hline
+	HU-08 & Publicar un perfil de búsqueda de pasantía & MR-01, MR-02 & Perfiles de usuario \\
+	\hline
+	HU-09 & Publicar, editar y desactivar ofertas & MR-02 & Ofertas de pasantía \\
+	\hline
+	HU-10 & Postularse a una oferta & MR-02 & Postulaciones \\
+	\hline
+	HU-11 & Consultar y retirar mis postulaciones & MR-02 & Postulaciones \\
+	\hline
+	HU-12 & Revisar postulaciones recibidas y aceptarlas o rechazarlas & MR-02 & Postulaciones \\
+	\hline
+	HU-13 & Buscar talentos & MR-01 & Talento e indicadores \\
+	\hline
+	HU-14 & Registrar las horas de los pasantes (empresa) & MR-03 & Reportes de horas \\
+	\hline
+	HU-15 & Consultar, descargar e imprimir mi reporte de horas (estudiante) & MR-03 & Reportes de horas \\
+	\hline
+	HU-16 & Consultar el historial de horas de mis pasantes (empresa) & MR-03 & Reportes de horas \\
+	\hline
+	HU-17 & Administrar usuarios y perfiles & MR-01, MR-04 & Administración del sistema \\
+	\hline
+	HU-18 & Administrar ofertas, postulaciones y publicaciones de búsqueda & MR-02 & Administración del sistema \\
+	\hline
+	HU-19 & Administrar reportes de horas & MR-03 & Administración del sistema \\
+	\hline
+	HU-20 & Consultar los paneles de indicadores según el perfil & MR-06 & Talento e indicadores \\
+	\hline
+	HU-21 & Navegar con validación de formularios en tiempo real & MR-06 & Interfaz de usuario \\
+	\hline
+	HU-22 & Proteger los datos y mantener su integridad & MR-05 & Seguridad y datos \\
+\end{longtable}
+
+
+
+
+\subsection{Matriz de criterios de aceptación}
+Los criterios de aceptación describen las condiciones que debe cumplir cada historia para darse
+por terminada. Son condiciones previstas, no resultados de pruebas ya ejecutadas. En la
+implementación se probarán con datos válidos, datos inválidos y permisos insuficientes.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{9.3cm}@{}}
+	\caption{Matriz de criterios de aceptación}\label{tab:matriz-criterios-aceptacion}\\
+	\hline
+	\textbf{Historia} & \textbf{Funcionalidad} & \textbf{Criterios de aceptación propuestos} \\
+	\hline
+	\endfirsthead
+	\caption[]{Matriz de criterios de aceptación (continuación)}\\
+	\hline
+	\textbf{Historia} & \textbf{Funcionalidad} & \textbf{Criterios de aceptación propuestos} \\
+	\hline
+	\endhead
+	\hline
+	\endlastfoot
+	HU-01 & Preparar backend, base de datos y estructura de capas & Configurar el backend por capas y PostgreSQL. Crear las migraciones y los modelos con sus relaciones. Verificar el arranque, la conexión y las operaciones básicas. \\
+	\hline
+	HU-02 & Registrarse en la plataforma & Crear una cuenta con datos válidos y un perfil permitido. Informar los campos inválidos o el correo duplicado sin crear cuentas repetidas. Mostrar el aviso de privacidad y pedir su aceptación. \\
+	\hline
+	HU-03 & Iniciar y cerrar sesión & Entrar con credenciales válidas y mostrar error si son incorrectas. Conservar la sesión al recargar la página. Al cerrar sesión, impedir consultar contenido privado. \\
+	\hline
+	HU-04 & Acceder a funciones según el rol & Mostrar a cada rol solo sus áreas y acciones. Impedir el acceso directo a áreas de otro rol. Rechazar operaciones no autorizadas también desde la API. \\
+	\hline
+	HU-05 & Consultar información pública y explorar ofertas & Mostrar la información pública y las ofertas activas sin iniciar sesión. Permitir filtrar las ofertas. No mostrar ofertas desactivadas. \\
+	\hline
+	HU-06 & Gestionar el perfil de estudiante & Completar y actualizar los datos personales, la carrera, las horas requeridas, la biografía, la foto y el currículum. Validar la información ingresada. Conservar los cambios al recargar. \\
+	\hline
+	HU-07 & Gestionar el perfil de empresa & Completar y actualizar el nombre comercial, el RUC, el sector, la dirección, la descripción y el logo. Validar los datos y conservar los cambios. \\
+	\hline
+	HU-08 & Publicar un perfil de búsqueda de pasantía & Publicar el área de interés, la disponibilidad y las habilidades. Permitir editar la publicación. Mostrarla a las empresas. \\
+	\hline
+	HU-09 & Publicar, editar y desactivar ofertas & Publicar una oferta con área, título, descripción, plazas, requisitos, modalidad y horas diarias. Editarla o desactivarla. Una oferta desactivada deja de recibir postulaciones. \\
+	\hline
+	HU-10 & Postularse a una oferta & Postularse solo a ofertas activas. Impedir postularse dos veces a la misma oferta. Registrar la postulación como pendiente. \\
+	\hline
+	HU-11 & Consultar y retirar mis postulaciones & Mostrar las postulaciones propias con su estado. Permitir retirar una postulación pendiente. No mostrar postulaciones de otros estudiantes. \\
+	\hline
+	HU-12 & Revisar postulaciones recibidas y aceptarlas o rechazarlas & Mostrar solo las postulaciones de las ofertas de la empresa. Aceptar o rechazar actualizando el estado. No aceptar si no hay vacantes disponibles. \\
+	\hline
+	HU-13 & Buscar talentos & Consultar las publicaciones de búsqueda de los estudiantes. Filtrar por área de interés. Informar cuando no hay resultados. \\
+	\hline
+	HU-14 & Registrar las horas de los pasantes (empresa) & Registrar horas con fecha y observaciones solo para estudiantes con postulación aceptada en una oferta de la empresa. Rechazar horas inválidas y registros de estudiantes ajenos. Actualizar el acumulado del estudiante. \\
+	\hline
+	HU-15 & Consultar, descargar e imprimir mi reporte de horas (estudiante) & Mostrar el reporte hecho por la empresa, con el historial y el total acumulado frente a las horas requeridas. Permitir descargarlo o imprimirlo. No permitir modificar las horas. Mostrar solo el reporte propio. \\
+	\hline
+	HU-16 & Consultar el historial de horas de mis pasantes (empresa) & Mostrar el historial y el acumulado de cada pasante de la empresa. No mostrar pasantes de otras empresas. Informar cuando no hay horas registradas. \\
+	\hline
+	HU-17 & Administrar usuarios y perfiles & Consultar usuarios y perfiles de estudiantes y empresas en listados. Activar o desactivar cuentas. Confirmar antes de retirar un registro. \\
+	\hline
+	HU-18 & Administrar ofertas, postulaciones y publicaciones de búsqueda & Consultar todas las ofertas, postulaciones y publicaciones del sistema. Desactivar ofertas. Reflejar los cambios para los demás usuarios. \\
+	\hline
+	HU-19 & Administrar reportes de horas & Consultar los reportes de horas de todos los estudiantes. Identificar a quienes avanzan más lento hacia las horas requeridas. \\
+	\hline
+	HU-20 & Consultar los paneles de indicadores según el perfil & Mostrar a cada perfil sus indicadores con gráficos (ofertas, postulaciones y horas). Calcular los valores con datos reales. Distinguir la falta de actividad de un error de consulta. \\
+	\hline
+	HU-21 & Navegar con validación de formularios en tiempo real & Mostrar los errores mientras se escribe. Guiar al usuario entre pantallas. Funcionar en pantallas de distinto tamaño. \\
+	\hline
+	HU-22 & Proteger los datos y mantener su integridad & Cifrar las contraseñas y usar HTTPS. Pedir solo los datos necesarios. Mantener las relaciones entre registros sin datos huérfanos. Informar los errores con mensajes claros. \\
+\end{longtable}
+
+\subsection{Planificación propuesta de los sprints}
+Las historias se agrupan en cuatro sprints siguiendo el orden de las actividades del cronograma y
+las dependencias entre módulos. Primero se construye el acceso por rol. Luego los perfiles, las
+ofertas y las búsquedas. Después las postulaciones y los reportes de horas, que dependen de que
+existan perfiles y ofertas. Al final la administración y los paneles, que consumen los datos de
+todos los módulos anteriores. Las fechas y la duración deben validarse con el cronograma
+general.
+
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{7.0cm}@{}}
+	\caption{Planificación propuesta de los sprints}\label{tab:planificacion-sprints}\\
+	\hline
+	\textbf{Iteración} & \textbf{Objetivo} & \textbf{Historias} & \textbf{Entregable previsto} \\
+	\hline
+	\endfirsthead
+	\caption[]{Planificación propuesta de los sprints (continuación)}\\
+	\hline
+	\textbf{Iteración} & \textbf{Objetivo} & \textbf{Historias} & \textbf{Entregable previsto} \\
+	\hline
+	\endhead
+	\hline
+	\endlastfoot
+	Sprint 1 & Fundamentos y acceso & HU-01 a HU-04 & Backend y PostgreSQL configurados; registro, inicio de sesión y control de acceso por rol comprobados. \\
+	\hline
+	Sprint 2 & Perfiles, ofertas y búsquedas & HU-05 a HU-09 y HU-13 & Perfiles de estudiante y empresa, publicación de ofertas, perfil de búsqueda y búsqueda de talentos. \\
+	\hline
+	Sprint 3 & Postulaciones y reportes de horas & HU-10 a HU-12 y HU-14 a HU-16 & Postulaciones con sus estados, aceptación según vacantes, registro de horas por la empresa y reporte descargable para el estudiante. \\
+	\hline
+	Sprint 4 & Administración, paneles e integridad & HU-17 a HU-22 & Funciones del administrador, paneles con gráficos para cada perfil, validación de formularios y protección de datos. \\
+\end{longtable}
+
 
 % ------------------------------------------------
 % CRONOGRAMA DE ACTIVIDADES
